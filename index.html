@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Tu negocio no aparece cuando te buscan? Esto te interesa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMPVECW7C6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RMPVECW7C6');
+</script>
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1885808908835578');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1885808908835578&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <style>
+        :root {
+            --primary: #05A3CE;
+            --primary-dark: #0389b0;
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray: #1a1a1a;
+            --neon-glow: 0 0 10px rgba(5, 163, 206, 0.7), 0 0 20px rgba(5, 163, 206, 0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            padding-top: 60px;
+            overflow-x: hidden;
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            position: relative;
+            padding-top: 80px;
+        }
+        
+        .glowing-border {
+            position: absolute;
+            top: 0;
+            width: 100%;      /* en lugar de 100vw */
+            left: 0;          /* en lugar de 50% + translateX */
+            transform: none;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.1;
+            z-index: -1;
+            animation: pulse 6s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.05; }
+            100% { opacity: 0.2; }
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 900;
+            text-shadow: 0 0 5px rgba(5, 163, 206, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .pain-point {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #FF5555;
+            font-weight: 700;
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .video-container {
+            position: relative;
+            transform: none;
+            box-shadow: var(--neon-glow);
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.5s;
+        }
+        
+        .video-container:hover {
+            transform: perspective(1000px) rotateX(0deg);
+        }
+        
+        video {
+            width: 100%;
+            display: block;
+        }
+        
+        /* Ocultar controles de progreso del video */
+        video::-webkit-media-controls-progress-bar {
+            display: none !important;
+        }
+        video::-webkit-media-controls-timeline {
+            display: none !important;
+        }
+        
+        /* Estilos base del overlay */
+        .paused-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px;
+            z-index: 10;
+            border: 2px solid var(--primary);
+            box-shadow: inset var(--neon-glow);
+            box-sizing: border-box;
+        }
+
+        .paused-content {
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+
+        .text-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 0px;
+        }
+
+        .text-content h2 {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            margin-bottom: 0px;
+            color: var(--white);
+            font-weight: 700;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+        .text-content p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            margin: 0;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .stop-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 150px;
+        }
+
+        .stop-logo {
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .paused-overlay .cta-button {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px 20px;
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            margin-top: 0;
+        }
+
+        /* Dentro de tu media query (max-width: 768px) */
+        @media (max-width: 768px) {
+        .paused-overlay {
+            /* Centrar verticalmente, el row lo hará la hija */
+            justify-content: center;
+            padding: 0px 15px;
+        }
+
+        .paused-content {
+            display: flex;                    /* activar flex */
+            flex-direction: row;              /* fila */
+            justify-content: space-between;   /* texto a la izquierda, logo a la derecha */
+            align-items: center;              /* alinear en el medio vertical */
+            width: 100%;                      /* ocupar todo el ancho */
+            margin-bottom: 15px;
+        }
+
+        .text-content {
+            flex: 1;                          /* que el texto ocupe todo el espacio sobrante */
+            text-align: left;
+        }
+
+        .stop-content {
+            flex-shrink: 0;                   /* que el logo no se encoja */
+            margin-left: 10px;                /* separación mínima */
+        }
+
+        .stop-logo {
+            max-width: 100px;
+            height: auto;
+        }
+        }
+
+        /* Y para móviles muy pequeños */
+        @media (max-width: 480px) {
+        .text-content h2 { font-size: 1.2rem; }
+        .text-content p  { font-size: 1rem;  }
+        .stop-logo       { max-width: 80px;  }
+        .paused-overlay .cta-button { padding: 8px 0px; }
+        }
+
+        
+        /* Reemplaza los estilos existentes del .cta-button por estos: */
+        .cta-button {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px; /* Aumenté el padding para mejor apariencia */
+            font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(5, 163, 206, 0.5);
+            display: inline-block; /* Para que no ocupe todo el ancho */
+            min-width: 280px; /* Ancho mínimo para mantener proporción */
+            text-align: center; /* Centrar el texto */
+            margin: 10px 0; /* Margen superior e inferior */
+        }
+
+        /* Estilos específicos para el botón final CTA */
+        #finalCta {
+            padding: 18px 40px; /* Más grande que los otros botones */
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        /* Efecto hover para todos los botones */
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 0 20px rgba(5, 163, 206, 0.8);
+            transform: translateY(-3px);
+        }
+
+        /* Estilos responsive para el botón final */
+        @media (max-width: 768px) {
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+                min-width: 240px;
+            }
+            
+            #finalCta {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                min-width: 200px;
+            }
+            
+            #finalCta {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+        
+        
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+        
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+            pointer-events: none;
+        }
+        
+        .cta-button:hover::after {
+            left: 100%;
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(90deg, var(--black), var(--primary), var(--black));
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin: 40px 0;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--neon-glow);
+            animation: pulse-banner 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes pulse-banner {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        
+        .urgency-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { left: -100%; }
+            20%, 100% { left: 100%; }
+        }
+        
+        
+        .floating-elements {
+            position: absolute;
+            display: block; /* o flex si lo deseas visible */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Esto está bien siempre que el contenedor padre tenga height fijo o relativo */
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden; /* Asegura que nada se desborde */
+        }
+
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(5, 163, 206, 0.1);
+            border: 1px solid rgba(5, 163, 206, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-1000px) rotate(720deg); }
+        }
+        
+        .testimonial-image-wrapper {
+            margin-top: 20px;
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background-color: #000; /* opcional por si no carga la imagen */
+        }
+
+        .testimonial-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--gray);
+            margin-top: 70px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        .final-cta {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .final-cta h2 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .pain-point {
+                font-size: 1.1rem;
+            }
+            
+            .click-overlay {
+                font-size: 1.2rem;        /* texto más pequeño */
+                padding: 0px;            /* algo de espacio interno */
+            }
+            .click-overlay .audio-icon {
+                width: 60px;              /* ícono más pequeño */
+                margin-bottom: 0px;
+            }
+            
+            .urgency-banner {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Efecto de máquina de escribir */
+        .typewriter {
+            overflow: hidden;
+            white-space: normal;
+            animation: none;
+            border-right: 3px solid var(--primary);
+            margin: 0 auto;
+            letter-spacing: 1px;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary); }
+        }
+
+        .click-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(5, 163, 206, 0.85); /* azul semitransparente */
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-size: 1.6rem;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .audio-icon {
+            width: 80px;
+            margin-bottom: 0px;
+        }
+
+        .progress-bar-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 30;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #05A3CE;
+            transition: width 0.1s linear;
+        }
+
+        .top-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #05A3CE;
+            color: white;
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Montserrat', sans-serif;
+            animation: pulse-banner 1.5s infinite alternate;
+        }
+
+        .top-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .left-text {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .right-text {
+            font-size: 1.05rem;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .right-text {
+                font-size: 0.95rem;
+            }
+
+            .left-text {
+                font-size: 1.1rem;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        <div class="top-banner-content">
+            <div class="left-text">
+                ¡SOLO 20 CUPOS DISPONIBLES!
+            </div>
+            <div class="right-text">
+                Estamos ayudando solo a 20 negocios <br> Escríbenos antes de que se cierren los cupos
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="glowing-border"></div>
+            <h1>HAY 2 TIPOS DE NEGOCIOS: LOS QUE <strong>GOOGLE</strong> MUESTRA Y LOS QUE NADIE ENCUENTRA</h1>
+            <p class="subtitle">En este video te mostramos cómo pasarte al primer grupo.</p>
+            <p class="pain-point">Mientras lees esto, 10 clientes potenciales no te encontraron... y fueron con tu competencia</p>
+        </header>
+        
+        <div class="video-container">
+            <!-- Generar elementos flotantes con JS -->
+            <div class="floating-elements" id="floatingElements"></div>
+            
+            <video id="mainVideo" playsinline muted>
+                <source src="../720_VideoSEO.mp4" type="video/mp4">
+            </video>            
+
+            <div class="click-overlay" id="clickOverlay">
+                <div class="click-message">
+                    <img src="../icono_audio.png" alt="Audio" class="audio-icon" />
+                    <p><strong>Clic para ver el video</strong></p>
+                    <p>Sube el volumen 🔊</p>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+
+            <div class="paused-overlay" id="pausedOverlay">
+                <div class="paused-content">
+                    <div class="text-content">
+                        <h2>ESTE VIDEO SE BORRARÁ A LAS 23:59 DE HOY</h2>
+                        <p>ESTA ES TU ÚNICA OPORTUNIDAD</p>
+                    </div>
+                    <div class="stop-content">
+                        <img src="../stop.png" alt="STOP Logo" class="stop-logo">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="cta-button" id="resumeButton">¡Clic para seguir viendo!</button>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="urgency-banner" id="urgencyBanner">
+            ¡SOLO DISPONIBLE POR TIEMPO LIMITADO! EL VIDEO SE BORRARÁ EN <span id="fullCountdown">00:00:00</span>
+        </div>
+        
+        <div class="testimonial">
+            <div class="testimonial-image-wrapper">
+                <img src="../cliente.jpg" alt="Testimonio en WhatsApp" class="testimonial-image">
+            </div>
+        </div>
+        
+        
+        <div class="final-cta">
+            <h2 class="typewriter"> <strong>¿YA VISTE TODO LO QUE ESTÁS PERDIENDO POR NO APARECER DONDE TUS CLIENTES BUSCAN?</strong></h2>
+            <p style="margin-bottom: 30px; font-size: 1.2rem;">Agenda tu reunión virtual gratuita donde analizamos tu negocio paso a paso y te mostramos qué puedes mejorar desde ya.</p>
+            <button class="cta-button" id="finalCta">¡QUIERO APARECER PRIMERO AHORA!</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 CUSIG | Todos los derechos reservados</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('mainVideo');
+            const clickOverlay = document.getElementById('clickOverlay');
+            const progressBar = document.getElementById('progressBar');
+            const pausedOverlay = document.getElementById('pausedOverlay');
+            const resumeButton = document.getElementById('resumeButton');
+            const finalCta = document.getElementById('finalCta');
+            const fullCountdownElement = document.getElementById('fullCountdown');
+            const floatingElements = document.getElementById('floatingElements');
+            const urgencyBanner = document.getElementById('urgencyBanner');
+
+            // Activar reproducción al hacer clic
+            clickOverlay.addEventListener('click', () => {
+                video.muted = false;
+                video.play();
+                video.setAttribute('controls', true);
+                clickOverlay.style.display = 'none';
+            });
+
+            // Elementos flotantes
+            function createFloatingElements() {
+                const count = 15;
+                for (let i = 0; i < count; i++) {
+                    const element = document.createElement('div');
+                    element.classList.add('floating-element');
+                    const size = Math.random() * 15 + 5;
+                    element.style.width = `${size}px`;
+                    element.style.height = `${size}px`;
+                    element.style.left = `${Math.random() * 100}%`;
+                    element.style.top = `${Math.random() * 100}%`;
+                    element.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                    element.style.animationDelay = `${Math.random() * 5}s`;
+                    floatingElements.appendChild(element);
+                }
+            }
+            createFloatingElements();
+
+            // Barra de progreso real del video
+            video.addEventListener('timeupdate', function () {
+                const duration = video.duration || 1;
+                const currentTime = video.currentTime;
+                const rawPercent = currentTime / duration;
+
+                let visualPercent;
+
+                if (rawPercent < 0.3) {
+                    // Aceleración extrema: en el 30% del video ya estamos en 95%
+                    visualPercent = rawPercent / 0.3 * 0.95; // escala de 0 a 95%
+                } else {
+                    // Resto del video (30% a 100%) avanza lento hasta completar 100%
+                    visualPercent = 0.95 + ((rawPercent - 0.3) / 0.7) * 0.05; // de 95% a 100%
+                }
+
+                progressBar.style.width = `${Math.min(visualPercent * 100, 100)}%`;
+            });
+
+
+
+
+
+            // Control de pausa
+            video.addEventListener('pause', function() {
+                pausedOverlay.style.display = 'flex';
+                updateCountdown();
+            });
+            
+            resumeButton.addEventListener('click', function() {
+                pausedOverlay.style.display = 'none';
+                video.play();
+            });
+
+            // WhatsApp CTA
+            finalCta.addEventListener('click', function() {
+                finalCta.textContent = '¡ABRIENDO WHATSAPP...!';
+                finalCta.style.backgroundColor = '#25D366';
+                const phoneNumber = '+573126865031';
+                const message = 'Hola, Quiero aparecer primero cuando me busquen en Google. ¿Cómo empiezo? 📍 ';
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                setTimeout(() => {
+                    if(isMobile) {
+                        window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+                    } else {
+                        window.open(`https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`, '_blank');
+                    }
+                }, 800);
+            });
+
+            // CONTADOR CORREGIDO (Función principal)
+            function updateCountdown() {
+                const now = new Date();
+                const endOfDay = new Date();
+                endOfDay.setHours(23, 59, 59, 999);
+                
+                const diff = endOfDay - now;
+                
+                // Si ya pasó la hora, mostrar 00:00:00
+                if (diff <= 0) {
+                    fullCountdownElement.textContent = '00h 00m 00s';
+                    return;
+                }
+                
+                const hours = Math.floor(diff / (1000 * 60 * 60)).toString().padStart(2, '0');
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+                
+                fullCountdownElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            // Iniciar contador
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Efecto de escritura
+            setTimeout(() => {
+                document.querySelector('.typewriter').style.animation = 'none';
+                setTimeout(() => {
+                    document.querySelector('.typewriter').style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+                }, 10);
+            }, 3500);
+            
+            // Efecto de parpadeo
+            setInterval(() => {
+                urgencyBanner.style.boxShadow = urgencyBanner.style.boxShadow === 'none' ? 
+                    '0 0 15px rgba(5, 163, 206, 0.8)' : 'none';
+            }, 1000);
+            
+            // Bloqueos de interfaz
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.target === video && [32, 37, 38, 39, 40].includes(e.keyCode)) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
