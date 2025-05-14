@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Allow: /
+
+Sitemap: https://www.lidereslocales.com/sitemap.xml
