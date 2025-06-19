@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cansada de Ver Tu Spa Vacío? - Posicionamiento Google Garantizado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D4AF37;
+            --primary-dark: #B8941F;
+            --secondary: #1A1A1A;
+            --accent: #FF6B6B;
+            --white: #FFFFFF;
+            --gray-light: #F8F8F8;
+            --gray-dark: #2C2C2C;
+            --success: #4ECDC4;
+            --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.3);
+            --shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.3);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F7D794 50%, #D4AF37 100%);
+            --gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--gradient-dark);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .luxury-border {
+            position: relative;
+            padding: 3px;
+            background: var(--gradient-gold);
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+
+        .luxury-border-inner {
+            background: var(--secondary);
+            border-radius: 17px;
+            padding: 40px 30px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .subtitle {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: var(--gray-light);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pain-highlight {
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.2), transparent);
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* VIDEO SECTION */
+        .video-container {
+            position: relative;
+            max-width: 900px;
+            margin: 40px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-gold);
+            border: 3px solid var(--primary);
+            width: 100%; /* Importante para móviles */
+            aspect-ratio: 16/9; /* Mantener proporción */
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                margin: 20px auto;
+                border-radius: 15px;
+                border: 2px solid var(--primary);
+            }
+        }
+        
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        /* PROBLEMA SECTION */
+        .problem-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .problem-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .problem-visual {
+            background: var(--gradient-dark);
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-dark);
+        }
+
+        .problem-visual p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .google-maps-mockup {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .map-result {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .result-number {
+            background: var(--accent);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .your-result {
+            background: #f0f0f0;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* TESTIMONIOS */
+        .testimonials {
+            margin: 60px 0;
+        }
+
+        .testimonials h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .testimonial-card {
+            background: var(--gradient-dark);
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--gray-light);
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .testimonial-image-wrapper {
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            margin-top: 15px;
+        }
+
+        .testimonial-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* SERVICIOS */
+        .services {
+            margin: 60px 0;
+        }
+
+        .services h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .service-item {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: scale(1.05);
+        }
+
+        .service-check {
+            color: var(--success);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* GARANTÍA */
+        .guarantee {
+            background: var(--gradient-dark);
+            border: 3px solid var(--success);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+            box-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+        }
+
+        .guarantee h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--success);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .guarantee p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* PRECIOS */
+        .pricing {
+            background: var(--luxury-border);
+            border-radius: 20px;
+            padding: 3px;
+            margin: 60px 0;
+        }
+
+        .pricing-inner {
+            background: var(--secondary);
+            border-radius: 17px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .price-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-amount {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .price-description {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .roi-calculation {
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid var(--success);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        /* CTA BUTTONS */
+        .cta-button {
+            background: var(--gradient-gold);
+            color: var(--secondary);
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            overflow: hidden;
+            min-width: 300px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* URGENCIA */
+        .urgency-section {
+            background: linear-gradient(135deg, var(--accent) 0%, #FF8E53 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+            animation: pulse-urgency 3s infinite;
+        }
+
+        @keyframes pulse-urgency {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .urgency-section h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* OVERLAY DE INICIO DEL VIDEO */
+        .video-start-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.6rem;
+            text-align: center;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 17px;
+        }
+
+        .play-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .play-triangle {
+            width: 0;
+            height: 0;
+            border-left: 25px solid var(--primary);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 8px;
+        }
+
+        .video-start-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .video-start-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        /* OVERLAY DE PAUSA DEL VIDEO - MEJORADO PARA MÓVILES */
+        .video-pause-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            display: none;
+            z-index: 15;
+            text-align: center;
+            border-radius: 17px;
+            min-height: 300px; /* Altura mínima garantizada */
+            flex-direction: row; /* CAMBIAR de column a row */
+            justify-content: space-between; /* CAMBIAR de center a space-between */
+            align-items: center; /* mantener */
+            padding: 15px; /* REDUCIR padding */
+        }
+
+        .pause-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 65%; /* CAMBIAR de 90% a 65% */
+            margin-bottom: 0; /* CAMBIAR de 25px a 0 */
+            text-align: left; /* AGREGAR esta línea */
+            flex: none; /* CAMBIAR de flex: 1 a flex: none */
+        }
+
+        .pause-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 4vw, 2.2rem); /* Responsive */
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .pause-message {
+            font-size: clamp(1rem, 3vw, 1.3rem); /* Responsive */
+            margin-bottom: 12px;
+            color: var(--gray-light);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .urgency-text {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Responsive */
+            animation: pulse-red 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        .resume-btn {
+            background: var(--gradient-gold);
+            color: var(--secondary);
+            border: none;
+            padding: 12px 25px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Responsive */
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-gold);
+            min-width: 120px; /* CAMBIAR de 200px a 120px */
+            width: auto; /* CAMBIAR de 80% a auto */
+            max-width: 150px; /* CAMBIAR de 300px a 150px */
+            margin-left: 15px; /* AGREGAR esta línea */
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* ESPECÍFICO PARA MÓVILES */
+        @media (max-width: 768px) {
+            .video-pause-overlay {
+                flex-direction: row; /* MANTENER row */
+                justify-content: space-between; /* MANTENER space-between */
+                padding: 12px; /* REDUCIR más el padding */
+                min-height: 200px; /* REDUCIR altura mínima */
+            }
+            
+            .pause-content {
+                max-width: 60%; /* CAMBIAR de 95% a 60% */
+            }
+            
+            .resume-btn {
+                min-width: 100px; /* CAMBIAR de 180px a 100px */
+                width: auto; /* CAMBIAR de 90% a auto */
+                font-size: 0.8rem; /* REDUCIR tamaño de fuente */
+                padding: 8px 12px; /* REDUCIR padding */
+            }
+
+            
+            .pause-title {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+            }
+            
+            .pause-message {
+                font-size: 1.05rem;
+                margin-bottom: 10px;
+            }
+            
+            .urgency-text {
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+            }
+            
+            
+        }
+
+        /* PARA MÓVILES MUY PEQUEÑOS */
+        @media (max-width: 480px) {
+            .video-pause-overlay {
+                min-height: 250px;
+                padding: 12px;
+            }
+            
+            .pause-title {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            
+            .pause-message {
+                font-size: 0.95rem;
+                margin-bottom: 8px;
+            }
+            
+            .urgency-text {
+                font-size: 0.85rem;
+                margin-bottom: 12px;
+            }
+            
+            .resume-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+                min-width: 160px;
+            }
+        }
+        /* FINAL CTA */
+        .final-cta {
+            text-align: center;
+            margin: 80px 0;
+            padding: 60px 30px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 20px;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--primary);
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .final-cta .offer-box {
+            background: var(--gradient-dark);
+            border: 3px solid var(--primary);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .offer-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .offer-list li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: var(--gray-light);
+        }
+
+        .offer-list li::before {
+            content: '🎁';
+            margin-right: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--gray-dark);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+            border-top: 3px solid var(--primary);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .luxury-border-inner {
+                padding: 25px 20px;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button {
+                min-width: 280px;
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ANIMACIONES LUXURY */
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, var(--primary) 25%, var(--white) 50%, var(--primary) 75%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>¿TUS CLIENTAS IDEALES TE BUSCAN EN GOOGLE PERO VAN DONDE LA COMPETENCIA?</h1>
+            <p class="subtitle">Descubre el sistema que convirtió a una esteticista invisible en <strong>LA REFERENCIA</strong> de su ciudad</p>
+            
+            <div class="pain-highlight">
+                <strong>En este video te muestro cómo llenar tu agenda sin gastar un peso más en publicidad</strong>
+            </div>
+
+            <!-- AQUÍ VA TU VIDEO -->
+            <div class="video-container">
+                <video id="mainVideo" playsinline>
+                    <source src="../landingpage-esteticista/LandingpaseoSeoEstetica2.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+                
+                <!-- OVERLAY DE INICIO -->
+                <div class="video-start-overlay" id="videoStartOverlay">
+                    <div class="video-start-text">Haz clic para iniciar</div>
+                    <div class="play-icon">
+                        <div class="play-triangle"></div>
+                    </div>
+                    
+                    <div class="video-start-subtitle">🔊 Activa el sonido para una mejor experiencia</div>
+                </div>
+                
+                <!-- OVERLAY DE PAUSA -->
+                <div class="video-pause-overlay" id="videoPauseOverlay">
+                    <div class="pause-content">
+                        <h3 class="pause-title">⚠️ Información Crítica Para Tu Negocio</h3>                        <p class="urgency-text">🕐 Esta información se borrará pronto - No pierdas esta oportunidad</p>
+                    </div>
+                    <button class="resume-btn" id="resumeVideoBtn">Continuar Viendo</button>
+                </div>
+            </div>
+
+            <button class="cta-button">Quiero Que Mi Spa Aparezca Primero</button>
+        </section>
+
+        <!-- PROBLEMA VISUAL -->
+        <section class="problem-section">
+            <h2>Esto Es Lo Que Ven Tus Clientas Cuando Te Buscan</h2>
+            
+            <div class="problem-visual">
+                <p><strong>Búsqueda: "spa en [tu ciudad]"</strong></p>
+                
+                <div class="google-maps-mockup">
+                    <div class="map-result">
+                        <span class="result-number">1</span>
+                        <div>
+                            <strong>Spa Competencia A</strong><br>
+                            ⭐⭐⭐⭐⭐ 4.8 (120 reseñas)<br>
+                            📞 ¡LLAMAN AQUÍ!
+                        </div>
+                    </div>
+                    <div class="map-result">
+                        <span class="result-number">2</span>
+                        <div>
+                            <strong>Spa Competencia B</strong><br>
+                            ⭐⭐⭐⭐ 4.5 (85 reseñas)<br>
+                            📞 ¡Y AQUÍ!
+                        </div>
+                    </div>
+                    <div class="map-result">
+                        <span class="result-number">3</span>
+                        <div>
+                            <strong>Spa Competencia C</strong><br>
+                            ⭐⭐⭐⭐ 4.2 (95 reseñas)<br>
+                            📞 ¡TAMBIÉN AQUÍ!
+                        </div>
+                    </div>
+                    <div class="map-result your-result">
+                        <span class="result-number">❌</span>
+                        <div>
+                            <strong>TU SPA</strong><br>
+                            👻 INVISIBLE - Nadie te encuentra<br>
+                            📵 Cero llamadas
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="color: var(--accent); font-weight: 700; margin-top: 20px;">
+                    El 70% de las clientas hace clic en los primeros 3 resultados. Si no estás ahí, NO EXISTES.
+                </p>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="testimonials">
+            <h2>Resultados Reales de Nuestras Clientas</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"En 2 meses pasé de invisible a posición #2. Mi teléfono suena todo el día con citas nuevas. ¡No puedo creer lo rápido que funcionó!"</p>
+                    <p class="testimonial-author">María Elena - Spa Belleza Natural, Envigado</p>
+                    <div class="testimonial-image-wrapper">
+                        <!-- AQUÍ VA LA IMAGEN 1 QUE SUBISTE -->
+                        <img src="../landingpage-esteticista/spa.jpeg" alt="Testimonio María Elena Envigado" class="testimonial-image">
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Antes dependía del boca a boca. Ahora tengo lista de espera y mis ingresos se duplicaron solo con las clientas nuevas que llegan por Google."</p>
+                    <p class="testimonial-author">Carolina - Centro Estético Luna, Cali</p>
+                    <div class="testimonial-image-wrapper">
+                        <!-- AQUÍ VA LA IMAGEN 2 QUE SUBISTE -->
+                        <img src="../landingpage-esteticista/esteticista.jpeg" alt="Testimonio Carolina Cali" class="testimonial-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="services luxury-border">
+            <div class="luxury-border-inner">
+                <h2>Todo Lo Que Hacemos Para Posicionar Tu Spa</h2>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <span class="service-check">✅</span>
+                        <strong>Perfil de Google optimizado al 100%</strong><br>
+                        Para que Google te entienda perfectamente
+                    </div>
+                    <div class="service-item">
+                        <span class="service-check">✅</span>
+                        <strong>Página web profesional completa</strong><br>
+                        Sin que tú hagas nada técnico
+                    </div>
+                    <div class="service-item">
+                        <span class="service-check">✅</span>
+                        <strong>Publicaciones constantes</strong><br>
+                        Subimos contenido cada semana
+                    </div>
+                    <div class="service-item">
+                        <span class="service-check">✅</span>
+                        <strong>Posicionamiento TOP 3 garantizado</strong><br>
+                        O te devolvemos tu dinero
+                    </div>
+                    <div class="service-item">
+                        <span class="service-check">✅</span>
+                        <strong>Reportes mensuales</strong><br>
+                        Para que veas cómo vas subiendo
+                    </div>
+                    <div class="service-item">
+                        <span class="service-check">✅</span>
+                        <strong>Tu spa en todos los directorios</strong><br>
+                        Donde Google busca confirmación
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GARANTÍA -->
+        <section class="guarantee">
+            <h2>🛡️ Nuestra Garantía de Resultados</h2>
+            <p><strong>"Si en 2 meses tu spa no está posicionado en los primeros 3 lugares de Google para las búsquedas de tu zona, te devolvemos el 100% de tu dinero. Sin preguntas. Sin excusas."</strong></p>
+        </section>
+
+        <!-- PRECIOS -->
+        <section class="pricing">
+            <div class="pricing-inner">
+                <h2>¿Cuánto Vale Tener Tu Agenda Llena Todos Los Días?</h2>
+                
+                <div class="price-box">
+                    <div class="price-amount">$1.000.000 COP</div>
+                    <div class="price-description">Implementación Completa (2 meses)</div>
+                    <p>Todo el sistema funcionando</p>
+                </div>
+                
+                <div class="price-box">
+                    <div class="price-amount">$100.000 COP</div>
+                    <div class="price-description">Mantenimiento mensual</div>
+                    <p>Para mantenerte siempre en el TOP 3</p>
+                </div>
+                
+                <div class="roi-calculation">
+                    <h3 style="color: var(--success); margin-bottom: 15px;">💰 Recupera Tu Inversión Rápidamente</h3>
+                    <p><strong>Con solo 10 servicios de $100.000 recuperas toda tu inversión.</strong></p>
+                    <p>Nuestras clientas empiezan a recibir citas nuevas desde el primer mes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- URGENCIA -->
+        <section class="urgency-section">
+            <h3>⚠️ Cada Día Que Esperes, Pierdes Clientas</h3>
+            <p><strong>Tus competidores se quedan con TUS clientas potenciales</strong></p>
+            <p>Google se acostumbra a mostrar a otros en lugar de ti</p>
+            <p>Otros spas implementan sistemas como el nuestro y dominan TU mercado</p>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <h2 class="shimmer-text">¿Lista Para Ser LA Autoridad en Spas de Tu Zona?</h2>
+            
+            <div class="offer-box">
+                <div class="offer-title">SOLO para las primeras 10 propietarias que nos escriban HOY:</div>
+                
+                <ul class="offer-list">
+                    <li><strong>Análisis GRATUITO y visual</strong> de cómo está tu negocio actualmente en Google</li>
+                    <li><strong>Te mostramos exactamente</strong> por qué no apareces y cómo solucionarlo</li>
+                    <li><strong>Plan personalizado</strong> para dominar tu zona específica</li>
+                </ul>
+                
+                <p style="font-size: 1.1rem; margin-top: 20px; color: var(--gray-light);">
+                    <strong>Solo quedan pocos cupos. Cada día que esperes, tu competencia se queda con más clientas.</strong>
+                </p>
+            </div>
+
+            <button class="cta-button" id="whatsappCTA">Escribir al WhatsApp Ahora</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 CUSIG | Posicionamiento SEO Local para Spas | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // WhatsApp CTA functionality
+            const whatsappButtons = document.querySelectorAll('.cta-button');
+            
+            whatsappButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Cambiar texto del botón
+                    button.textContent = '¡Abriendo WhatsApp...!';
+                    button.style.background = 'linear-gradient(135deg, #25D366 0%, #20B354 100%)';
+                    
+                    // Configurar WhatsApp
+                    const phoneNumber = '+573126865031';
+                    const message = 'Hola! Vi tu página sobre posicionamiento para spas. Quiero que mi spa aparezca primero en Google cuando me busquen. ¿Puedes mostrarme cómo está mi negocio actualmente? 💅✨';
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    
+                    setTimeout(() => {
+                        if(isMobile) {
+                            window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+                        } else {
+                            window.open(`https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`, '_blank');
+                        }
+                        
+                        // Restaurar botón después de 3 segundos
+                        setTimeout(() => {
+                            button.textContent = 'Escribir al WhatsApp Ahora';
+                            button.style.background = '';
+                        }, 3000);
+                    }, 800);
+                });
+            });
+
+            // Animación de aparición suave
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Aplicar animaciones a elementos
+            document.querySelectorAll('.testimonial-card, .service-item, .price-box').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+
+        // FUNCIONALIDAD DEL VIDEO CON OVERLAYS
+        const mainVideo = document.getElementById('mainVideo');
+        const videoStartOverlay = document.getElementById('videoStartOverlay');
+        const videoPauseOverlay = document.getElementById('videoPauseOverlay');
+        const resumeVideoBtn = document.getElementById('resumeVideoBtn');
+
+        // Iniciar video al hacer clic en overlay de inicio
+        videoStartOverlay.addEventListener('click', function() {
+            mainVideo.muted = false; // Activar sonido
+            mainVideo.play();
+            videoStartOverlay.style.display = 'none';
+            mainVideo.setAttribute('controls', 'true'); // Mostrar controles
+        });
+
+        // Mostrar overlay cuando se pausa el video
+        mainVideo.addEventListener('pause', function() {
+            // Solo mostrar overlay si el video no ha terminado
+            if (mainVideo.currentTime < mainVideo.duration - 1) {
+                videoPauseOverlay.style.display = 'flex';
+            }
+        });
+
+        // Ocultar overlay cuando se reproduce el video
+        mainVideo.addEventListener('play', function() {
+            videoPauseOverlay.style.display = 'none';
+        });
+
+        // Botón para reanudar video
+        resumeVideoBtn.addEventListener('click', function() {
+            videoPauseOverlay.style.display = 'none';
+            mainVideo.play();
+        });
+
+        // Ocultar overlay cuando el video termina
+        mainVideo.addEventListener('ended', function() {
+            videoPauseOverlay.style.display = 'none';
+        });
+
+
+
+        // FUNCIONALIDAD DE PANTALLA COMPLETA Y ROTACIÓN
+        function requestFullscreenAndRotate() {
+            const video = document.getElementById('mainVideo');
+            
+            // Solicitar pantalla completa
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { // Safari
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE/Edge
+                video.msRequestFullscreen();
+            }
+            
+            // Solicitar orientación horizontal (solo funciona en algunos navegadores móviles)
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('landscape').catch(function(error) {
+                    console.log('No se pudo bloquear la orientación:', error);
+                });
+            }
+        }
+
+        // Detectar cuando se sale de pantalla completa para restaurar orientación
+        document.addEventListener('fullscreenchange', function() {
+            if (!document.fullscreenElement) {
+                // Liberar bloqueo de orientación al salir de pantalla completa
+                if (screen.orientation && screen.orientation.unlock) {
+                    screen.orientation.unlock();
+                }
+            }
+        });
+
+        // Agregar doble clic al video para pantalla completa
+        mainVideo.addEventListener('dblclick', requestFullscreenAndRotate);
+    </script>
+</body>
+</html>
